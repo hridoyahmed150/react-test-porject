@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-class TestClass extends React.Component<MyState> {
+class TestClass extends React.Component {
   state: MyState = {
-    post: 0,
+    post: [],
   };
 
   componentDidMount() {
@@ -25,14 +25,12 @@ class TestClass extends React.Component<MyState> {
   render() {
     return (
       <div>
-        {this.state?.post?.map((item: any) => {
-          console.log(item);
-
+        {(this.state?.post).map((item: any) => (
           <div>
             <span>{item.title}</span>
             <span>{item.body}</span>
-          </div>;
-        })}
+          </div>
+        ))}
       </div>
     );
   }
@@ -42,11 +40,4 @@ export default TestClass;
 
 type MyState = {
   post: any; // like this
-};
-
-type Post = {
-  body: string;
-  id: number;
-  title: string;
-  userId: number;
 };

@@ -7,8 +7,7 @@ import TestClass from "./components/class-component/TestClass";
 function App() {
   return (
     <div className="App">
-      {/* <TestFunctional></TestFunctional> */}
-      <TestClass></TestClass>
+      <TestClass />
     </div>
   );
 }
